@@ -63,7 +63,7 @@
         <td>{{ $student->name }}</td>
         <td>
             <a href="/edit/{{ $student->id }}" class="button1">Edit</a>
-            <a href="/delete" class="button2">Delete</a>
+            <a href="/delete/{{ $student->id }}" class="button2">Delete</a>
         </td>
       </tr>
     @endforeach

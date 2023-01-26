@@ -30,4 +30,9 @@ class StudentController extends Controller
         $student->save();
         return redirect('/student');
     }
+    public function destroy($id){
+        $student= Student::whereId($id)->first();
+        $student->delete();
+        return redirect('/student');
+    }
 }
