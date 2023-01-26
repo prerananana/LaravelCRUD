@@ -62,8 +62,8 @@
         <td>{{ $loop->index+1  }}</td>
         <td>{{ $student->name }}</td>
         <td>
-            <button class="button1">Edit</button>
-            <button class="button2">Delete</button>
+            <a href="/edit/{{ $student->id }}" class="button1">Edit</a>
+            <a href="/delete" class="button2">Delete</a>
         </td>
       </tr>
     @endforeach

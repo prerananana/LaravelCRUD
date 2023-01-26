@@ -20,4 +20,14 @@ class StudentController extends Controller
         $student->save();
         return redirect('/student');
     }
+    public function edit($id){
+        $student= Student::where('id', $id)->first();
+        return view('edit', ['student'=> $student]);
+    }
+    public function update(Request $request, $id){
+        $student= Student::where('id', $id)->first();
+        $student->name= $request->name;
+        $student->save();
+        return redirect('/student');
+    }
 }
