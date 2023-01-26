@@ -18,7 +18,7 @@ class StudentController extends Controller
         $student = new Student;
         $student->name= $request->name;
         $student->save();
-        return redirect('/student');
+        return redirect('/ ');
     }
     public function edit($id){
         $student= Student::where('id', $id)->first();
@@ -28,11 +28,11 @@ class StudentController extends Controller
         $student= Student::where('id', $id)->first();
         $student->name= $request->name;
         $student->save();
-        return redirect('/student');
+        return redirect('/');
     }
     public function destroy($id){
         $student= Student::whereId($id)->first();
         $student->delete();
-        return redirect('/student');
+        return redirect('/');
     }
 }
